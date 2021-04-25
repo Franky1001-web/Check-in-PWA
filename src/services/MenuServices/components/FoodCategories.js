@@ -27,7 +27,7 @@ function Items() {
     let windowHeight = window.innerHeight;
     let windowWidth = window.innerWidth;
     return (
-        <div >
+        <div style={{width: "100%"}}>
             <br />
 
             <div ><ScrollMenu

@@ -34,7 +34,7 @@ function LandingPage(props) {
           <Grid item xs={10} >
 
             <img
-              style={{ height: '40px', width: '150px' }}
+              style={{ height: '35px', width: '150px' }}
               src={WhiteLogo}
               width={200}
             />
@@ -42,13 +42,13 @@ function LandingPage(props) {
             <br />
             <div style={{ fontWeight: 500, fontSize: 25 }} >Experience is everything</div>
             <br />
-            <div className="fw-400 fs-25" style={{ lineHeight: "20px" }}>
+            <div className="fw-400 fs-25" style={{ lineHeight: "18px" }}>
               Checkin is the only thing you need while eating
               out at Restaurant or staying in Hotel.
               Ordering, service, payments all at one place.
           </div>
             <br />
-            <Grid spacing={3} container >
+            <Grid spacing={1} container >
               <Grid item sm={6} xs={12} >
                 <Button
                   fullWidth
@@ -70,7 +70,7 @@ function LandingPage(props) {
             <div className="text-center" >
               <img
                 src={MobileApp}
-                height={window.innerHeight * 0.7 + "px"}
+                height={window.innerHeight * 0.55 + "px"}
               />
             </div>
 

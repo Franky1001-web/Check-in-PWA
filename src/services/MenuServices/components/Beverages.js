@@ -23,7 +23,7 @@ function Recommended(props) {
         [
             {
                 "pk": 85,
-                "name": "Fried Rice",
+                "name": "Coke",
                 "type": "RECOMMENDED",
                 "types": [
                     "Veg",
@@ -54,83 +54,59 @@ function Recommended(props) {
                 "menus": [
                     2
                 ],
-                mealtype: 'nonveg',
+                mealtype: 'veg',
                 cartValue: 0,
                 id: 85,
                 variants: [
-                    {
-                        name: "Veg",
-                        price: 125.00,
-                        type: "veg",
-                        variantId: 1,
-                        id: 85
-                    },
-                    {
-                        name: "Egg",
-                        price: 125.00,
-                        type: "nonveg",
-                        variantId: 2,
-                        id: 85
-                    },
-                    {
-                        name: "Paneer",
-                        price: 100.00,
-                        type: "veg",
-                        variantId: 3,
-                        id: 85
-                    },
+                    
                 ],
-                price: 300.00,
-                isCustomised: true,
+                price: 85.00,
+                isCustomised: false,
             },
             {
-                mealtype: 'nonveg',
+                mealtype: 'veg',
                 type: 'MUSTTRY',
-                name: 'Haka noodle',
-                price: 375.00,
+                name: 'Sprite',
+                price: 75.00,
                 discreption: '',
                 image: '',
-                isCustomised: true,
+                isCustomised: false,
                 cartValue: 0,
                 id: "hakanoodle",
                 variants: [
-                    {
-                        name: "Extra Veggie",
-                        price: 123.00,
-                        type: "veg",
-                        variantId: "extraveggie",
-                        id: "hakanoodle"
-                    },
-                    {
-                        name: "Extra Cheese",
-                        price: 110.00,
-                        type: "veg",
-                        variantId: "extracheese",
-                        id: "hakanoodle"
-                    }
+                   
                 ]
             },
             {
                 mealtype: 'veg',
                 type: 'RECOMMENDED',
-                name: 'Burger with Fries',
-                price: 375.00,
+                name: 'Juices',
+                price: 175.00,
                 discreption: 'Lettuce, totmato, caramelized onion, veggie, cheddar cheese.',
                 image: 'https://hips.hearstapps.com/hmg-prod/images/190416-chicken-burger-082-1556204252.jpg',
-                isCustomised: false,
+                isCustomised: true,
+                variants: [
+                    {
+                        name: "Orange",
+                        price: 123.00,
+                        type: "veg",
+                        variantId: "orangejuice",
+                        id: "orangej"
+                    }
+                ],
                 cartValue: 0,
-                id: "burgerwithfries"
+                id: "JUICE"
             },
             {
                 mealtype: 'veg',
                 type: 'MUSTTRY',
-                name: 'Pizza',
+                name: 'Appy',
                 price: 180.98,
                 discreption: '',
                 image: '',
                 isCustomised: false,
                 cartValue: 0,
-                id: "pizza"
+                id: "applejuice"
             },
         ]);
     const handleIncrease = (index) => {
@@ -163,8 +139,8 @@ function Recommended(props) {
 
     return (
 
-        <div id = "Recommended"style={{ marginBottom: '50px', width: Width+"px"}}>
-            <h3 style={{ color: '#6d6d6d', marginLeft: "5px" }}>&nbsp;Recommended</h3>
+        <div id="Beverages"style={{ marginBottom: '50px', width: Width+"px"}}>
+            <h3 style={{ color: '#6d6d6d', marginLeft: "5px" }}>&nbsp;Beverages</h3>
 
             {Items.map((item, index) =>
                 <div style={{ height: '150px', width: Width + 'px', marginLeft: "10px"}}>

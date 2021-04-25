@@ -10,6 +10,10 @@ import { useHistory } from 'react-router-dom';
 import { getPromos, loadRecommendedRestaurants } from '../middleware'
 import { connect } from "react-redux"
 import BottomBar from "../components/AbsoluteComponents"
+import Beverages from "../components/Beverages"
+import Divider from '@material-ui/core/Divider';
+import Dishes from '../components/Dishes'
+import Displaydish from '../components/DisplayDish'
 
 function MenuPage(props) {
     const {
@@ -26,10 +30,13 @@ function MenuPage(props) {
         _load_recommended_restaurants()
         _get_promos("11")
     }, [])
+    const windowWidth = window.innerWidth;
+    
+    // console.log(Dishes);
     return (
-        <div style={{ width: '100%' }}>
+        <div style={{width: '100%'}}>
             <div
-                style={{ width: '100%', borderBottom: "1px solid grey" }}
+                style={{ width: "100%", borderBottom: "1px solid grey" }}
             >
                 <div style={{ margin: '15px', display: 'flex' }}>
                     <div>
@@ -37,7 +44,7 @@ function MenuPage(props) {
                     </div>
                     <div>
                         <div style={{ color: "#ff5656" }}>
-                            Menu
+                            Menu <span>{window.innerWidth} {window.innerHeight}</span>
                         </div>
                         <div style={{ fontSize: '10px', marginTop: '5px' }}>
                             Grey Orange - Lavel Road
@@ -49,10 +56,14 @@ function MenuPage(props) {
 
             <div style={{ position: 'absolute', zIndex: 10, width: '100%', }} > <CategoriesMenu /></div>
             <Items />
-            <Recommended />
-            {/* <ChatWithUs /> */}
-            <BrowseMenu />
-            <BottomBar />
+            {Dishes.map((item, index) => {
+                return( 
+                    <div>                                                       
+                        <Displaydish obj = {item} index = {index}/>             
+                    </div>
+                )
+            })}
+            {/* <BottomBar /> */}
         </div>
     )
 

@@ -3,6 +3,7 @@ import React from 'react'
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import { connect } from "react-redux"
 import { useHistory } from 'react-router-dom'
+import FastForwardIcon from '@material-ui/icons/FastForward'
 
 function AbsoluteComponents({ cart }) {
   const history = useHistory()
@@ -35,14 +36,23 @@ function AbsoluteComponents({ cart }) {
             </div>
           </div>
           <div>
-            <span
+            <div style={{
+              display: "flex",
+            }}>
+              <span
               style={{
-                fontSize: "18px",
+                display: "inline-block",
+                fontSize: "20px",
+                padding: "6px"
               }}
               onClick={() => history.push("/viewcart")}
             >
-              PROCEED
+              Continue</span><span style = {{
+                display: "inline-block",
+                padding: "5px"
+              }}><FastForwardIcon fontSize="small"/>
             </span>
+            </div>
           </div>
         </div>
       </div>
