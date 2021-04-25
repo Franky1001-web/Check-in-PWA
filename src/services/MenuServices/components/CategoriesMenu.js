@@ -55,7 +55,7 @@ export default function MenuListComposition() {
     }, [open]);
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'space-between', width: "100%" }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', }}>
 
             <div>
                 <Button

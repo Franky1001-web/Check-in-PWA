@@ -1,12 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Grid } from "@material-ui/core"
 import { connect } from "react-redux"
 
 import BoxInput from "../../../shared/components/TextInput/BoxInput"
 import Button from "../../../shared/components/Button/Basic"
 import { _set_state } from '../middleware'
-
-
 
 function AskOTP(props) {
   const { setState } = props
@@ -20,7 +18,9 @@ function AskOTP(props) {
 
   return (
     <div>
-      <Grid spacing={1} container >
+      <br />
+      <br />
+      <Grid spacing={3} container >
         <Grid item xs={1} >
 
         </Grid>
@@ -31,18 +31,18 @@ function AskOTP(props) {
             </Grid>
             <Grid item xs={12} >
               <Grid spacing={3} container >
-                 <Grid className="text-left" item xs={3} >
-                  <BoxInput isAutofocus={true} />
+                <Grid className="text-left" item xs={3} >
+                  <BoxInput />
                 </Grid>
                 <Grid className="text-left" item xs={3} >
-                  <BoxInput   />
+                  <BoxInput />
                 </Grid>
                 <Grid className="text-left" item xs={3} >
-                  <BoxInput  />
+                  <BoxInput />
                 </Grid>
                 <Grid className="text-left" item xs={3} >
-                  <BoxInput  />
-                </Grid> 
+                  <BoxInput />
+                </Grid>
               </Grid>
             </Grid>
             <Grid item xs={12} >
@@ -53,14 +53,14 @@ function AskOTP(props) {
                 Verify
           </Button>
             </Grid>
-            <Grid item xs={14} >
+            <Grid item xs={12} >
               <div style={{ fontWeight: 400, fontSize: 12 }} >
                 Didn’t recieve the verification OTP? <a className="a-tag" href="#" >Resend Again</a>
               </div>
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={0} >
+        <Grid item xs={1} >
 
         </Grid>
       </Grid>

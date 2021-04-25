@@ -68,9 +68,9 @@ function SignupPage(props) {
         <Grid item style={{ backgroundColor: "#ff5656" }} sm={4} xs={12} >
           <div style={{ backgroundColor: "#fff" }} className={classes.paper}>
             <img width="100%" src={MarketImage} />
-            <div className="text-center" style={{ marginTop: "22px" }} >
-              <img width="100" src={Logo}  />
-              <div style={{ letterSpacing: "0.95sp", fontSize: "28px", fontWeight: "bold", color: "#ff5656",margin: "10px 0" }} >
+            <div className="text-center" style={{ marginTop: "10px" }} >
+              <img width="100" src={Logo} />
+              <div style={{ letterSpacing: "0.95sp", fontSize: "28px", fontWeight: "bold", color: "#ff5656" }} >
                 Checkin
               </div>
             </div>
@@ -97,10 +97,7 @@ function SignupPage(props) {
                 }
                 <br />
                 <br />
-                <br />
-                <br />
-                <br />
-                <img width="100%" src={BottomDisplay} height="140px"  />
+                <img width="100%" src={BottomDisplay} />
               </div>
             </div>
           </div>

@@ -5,15 +5,9 @@ import {
 } from '@material-ui/core/styles';
 
 
-
-function BoxInput({ isAutofocus,ref1,ref2,label, ...rest }) {
+function BoxInput({ label, ...rest }) {
   const CustomTextField = withStyles({
     root: {
-      '& input': {
-        color: 'white',
-        fontSize: "1.3em",
-        textAlign: "center",
-      },
       '& input:valid + fieldset': {
         borderColor: 'white',
         borderWidth: 2,
@@ -34,16 +28,6 @@ function BoxInput({ isAutofocus,ref1,ref2,label, ...rest }) {
       <CustomTextField
         variant="outlined"
         label={label}
-        inputRef={ref1}
-        inputProps={{maxLength: 1},{
-          onKeyPress: event => {
-            const { key } = event;
-            console.log(key);
-            if (key === "Enter") {
-              ref2.current.focus();
-            }
-          }}}
-        autoFocus={isAutofocus}
         {...rest}
       />
     </div>
